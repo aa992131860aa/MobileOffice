@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main"
+    android:orientation="vertical">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/bg">
+
+
+        <TextView
+            android:id="@+id/tv_history_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/ll_history_title"
+            android:background="@color/gray" />
+
+        <LinearLayout
+            android:id="@+id/ll_history_contain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_history_line"
+            android:elevation="4dp"
+            android:orientation="vertical" />
+
+
+        <android.support.v7.widget.RecyclerView
+
+            android:id="@+id/rv_history"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_contact_person_title"
+            android:background="@color/bg"
+            android:scrollbars="vertical" />
+
+        <RelativeLayout
+            android:id="@+id/rl_no_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/ll_history_title"
+            android:background="@color/white"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_history"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/progress_bar_top"
+                android:src="@drawable/cloud_emoji" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_history"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:text="暂无该转运历史"
+                android:textColor="@color/font_black_c"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <ImageView
+
+            android:id="@+id/imageView4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/progress_bar_top"
+            android:src="@mipmap/ic_launcher"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/pb_history"
+            style="@style/mProgress_circle"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/ll_history_contain"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="87dp"
+            android:elevation="4dp" />
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/iv_history_chart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/cloud_2lishi_float1" />
+
+        <RelativeLayout
+            android:id="@+id/rl_contact_person_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/imageView4"
+            android:background="@color/main">
+
+            <LinearLayout
+                android:id="@+id/ll_history_back"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/nav_back" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_history_search"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="10dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/title_other_right"
+                    android:src="@drawable/nav_search"
+                    android:text="历史"
+                    android:textColor="@color/white"
+
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/edt_contact_person_add"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/edit_border_no_main"
+                    android:hint="请输入你要查找的转运历史"
+                    android:paddingBottom="@dimen/title_bottom"
+                    android:paddingTop="@dimen/title_top"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/font_black_9"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/white"
+
+                    />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_contact_person_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/listview"
+            android:layout_toRightOf="@+id/listview"
+            android:background="@color/main">
+
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/nav_back" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/title_other_right"
+                    android:src="@drawable/nav_add"
+                    android:text="历史"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:paddingBottom="@dimen/title_bottom"
+                android:paddingTop="@dimen/title_top"
+                android:text="互联"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title_size" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+
+            android:id="@+id/ll_link_jsw"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/layout_seletor"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/margin_space"
+            android:paddingRight="@dimen/margin_space">
+
+            <com.mobileoffice.view.RoundImageView
+                android:id="@+id/roundImageView"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/link_link1" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_link_jsw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_space"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:text="国家卫生计生委医政医管局"
+                    android:textColor="@color/font_black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_space"
+                    android:layout_marginTop="8dp"
+                    android:maxLines="1"
+                    android:text="绿色通道通知"
+                    android:textColor="@color/font_black_9"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/link_right" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/margin_space"
+            android:layout_marginRight="@dimen/margin_space"
+            android:background="@color/gray" />
+
+        <LinearLayout
+
+            android:id="@+id/ll_link_shen"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/layout_seletor"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/margin_space"
+            android:paddingRight="@dimen/margin_space">
+
+            <com.mobileoffice.view.RoundImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/link_link2" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_link_shen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_space"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:text="中国肾移植科学登录系统"
+                    android:textColor="@color/font_black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_space"
+                    android:layout_marginTop="8dp"
+                    android:maxLines="1"
+                    android:text="http://www.csrkt.org/main/index.do"
+                    android:textColor="@color/font_black_9"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/link_right" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/margin_space"
+            android:layout_marginRight="@dimen/margin_space"
+            android:background="@color/gray" />
+
+        <LinearLayout
+            android:id="@+id/ll_link_fenpei"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/layout_seletor"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/margin_space"
+            android:paddingRight="@dimen/margin_space">
+
+            <com.mobileoffice.view.RoundImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/link_link3" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_link_fenpei"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_space"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:text="中国人体器官分配与共享计算机系统"
+                    android:textColor="@color/font_black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_space"
+                    android:layout_marginTop="8dp"
+                    android:maxLines="1"
+                    android:text="https://www.cot.org.cn"
+                    android:textColor="@color/font_black_9"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/link_right" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/margin_space"
+            android:layout_marginRight="@dimen/margin_space"
+            android:background="@color/gray" />
+
+        <LinearLayout
+            android:id="@+id/ll_link_xin"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/layout_seletor"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/margin_space"
+            android:paddingRight="@dimen/margin_space">
+
+            <com.mobileoffice.view.RoundImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/link_link4" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_link_xin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_space"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:text="中国心脏脏移植注册系统"
+                    android:textColor="@color/font_black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_space"
+                    android:layout_marginTop="8dp"
+                    android:maxLines="1"
+                    android:text="http://chtr.cotr.cn/login.jsp"
+                    android:textColor="@color/font_black_9"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/link_right" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/margin_space"
+            android:layout_marginRight="@dimen/margin_space"
+            android:background="@color/gray" />
+
+        <LinearLayout
+            android:id="@+id/ll_link_fei"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/layout_seletor"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/margin_space"
+            android:paddingRight="@dimen/margin_space">
+
+            <com.mobileoffice.view.RoundImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/link_link5" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_link_fei"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_space"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:text="中国肺移植注册系统"
+                    android:textColor="@color/font_black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_space"
+                    android:layout_marginTop="8dp"
+                    android:maxLines="1"
+                    android:text="http://clutr.cotr.cn/login.jsp"
+                    android:textColor="@color/font_black_9"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/link_right" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/margin_space"
+            android:layout_marginRight="@dimen/margin_space"
+            android:background="@color/gray" />
+
+        <LinearLayout
+            android:id="@+id/ll_link_gan"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/layout_seletor"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/margin_space"
+            android:paddingRight="@dimen/margin_space">
+
+            <com.mobileoffice.view.RoundImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/link_link6" />
+
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_link_gan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_space"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:text="中国肝移植注册系统"
+                    android:textColor="@color/font_black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_space"
+                    android:layout_marginTop="8dp"
+                    android:maxLines="1"
+                    android:text="http://www.cltr.org"
+                    android:textColor="@color/font_black_9"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/link_right" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/margin_space"
+            android:layout_marginRight="@dimen/margin_space"
+            android:background="@color/gray" />
+
+        <LinearLayout
+            android:id="@+id/ll_link_guanli"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/layout_seletor"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/margin_space"
+            android:paddingRight="@dimen/margin_space">
+
+            <com.mobileoffice.view.RoundImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/link_link7" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_link_guanli"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_space"
+                    android:layout_weight="1"
+                    android:maxLines="1"
+                    android:text="中国红十字会中国人体捐献管理中心脏"
+                    android:textColor="@color/font_black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_space"
+                    android:layout_marginTop="8dp"
+                    android:maxLines="1"
+                    android:text="http://www.china-organdonation.org"
+                    android:textColor="@color/font_black_9"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/link_right" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="@dimen/margin_space"
+            android:layout_marginRight="@dimen/margin_space"
+            android:background="@color/gray" />
+    </LinearLayout>
+</ScrollView>

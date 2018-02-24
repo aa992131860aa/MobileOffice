@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/bg">
+
+
+        <RelativeLayout
+            android:id="@+id/rl_transfer_detail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/main">
+
+            <LinearLayout
+                android:id="@+id/ll_hospital_back"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/nav_back" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_info"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/nav_txt"
+                    android:visibility="visible"
+
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:paddingBottom="@dimen/title_bottom"
+                android:paddingTop="@dimen/title_top"
+                android:text="肝脏转运监控"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title_size" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_contain"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@id/rl_transfer_detail">
+
+            <RelativeLayout
+                android:id="@+id/rl_top"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/cloud_1index_bg"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/rl_title"
+                    android:layout_centerVertical="true">
+
+                    <RelativeLayout
+                        android:id="@+id/ll_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:orientation="horizontal">
+
+                        <TextView
+
+                            android:id="@+id/tv_transfer_detail_start"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="杭州"
+                            android:textColor="@color/font_black"
+                            android:textSize="@dimen/transfer_detail_font" />
+
+                        <TextView
+                            android:id="@+id/tv_distance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:text="剩余0km"
+                            android:textColor="@color/font_black_6"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_transfer_detail_end"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="上海"
+                            android:textColor="@color/font_black"
+                            android:textSize="@dimen/transfer_detail_font" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+
+                        android:id="@+id/rl_seek_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ll_title"
+                        android:layout_marginLeft="@dimen/transfer_space"
+                        android:layout_marginRight="@dimen/transfer_space">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="11dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="18dp"
+                            android:background="@color/red"
+                            android:visibility="gone" />
+
+                        <com.mobileoffice.utils.SeekBarHeart
+                            android:id="@+id/sbh_transfer_item"
+                            android:layout_width="match_parent"
+                            android:layout_height="19dp"
+                            android:layout_centerVertical="true"
+                            app:count="30"
+
+                            />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/rl_seek_bar"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="12dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/ll_start_weather"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/iv_start_icon"
+                                android:layout_width="27dp"
+                                android:layout_height="27dp"
+                                android:src="@drawable/cloud_2detail_1h2" />
+
+                            <TextView
+                                android:id="@+id/tv_start_content"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="阵雨"
+                                android:textColor="@color/font_black_9"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tv_start_temperature"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:text="28"
+                                android:textColor="@color/font_black_9"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+
+                            android:id="@+id/ll_end_weather"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="20dp"
+                            android:layout_toRightOf="@id/ll_start_weather"
+                            android:gravity="right"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/iv_end_icon"
+                                android:layout_width="27dp"
+                                android:layout_height="27dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/cloud_2detail_1h2" />
+
+                            <TextView
+                                android:id="@+id/tv_end_content"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="阵雨"
+                                android:textColor="@color/font_black_9"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tv_end_temperature"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5dp"
+                                android:text="28"
+                                android:textColor="@color/font_black_9"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/iv_organ"
+                        android:layout_width="27dp"
+                        android:layout_height="27dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/newtrs_table2_liver_on" />
+
+                    <TextView
+                        android:id="@+id/tv_organ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@id/iv_organ"
+                        android:text="肝脏"
+                        android:textColor="@color/main"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_organ_seg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="12345"
+                        android:textColor="@color/main"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10sp"
+                        android:text="2017-05-31"
+                        android:textColor="@color/main"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <com.amap.api.maps.MapView
+                android:id="@+id/mv_detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+
+        <com.mobileoffice.view.TouchLinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/rl_contain"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal">
+
+
+            <com.mobileoffice.view.TouchText
+                android:id="@+id/tv_one"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:duplicateParentState="true"
+                android:gravity="center"
+                android:text="常用参数"
+                android:textColor="@color/font_black_6"
+                android:textSize="16sp" />
+
+            <com.mobileoffice.view.TouchText
+                android:id="@+id/tv_two"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/green"
+                android:gravity="center"
+                android:text="转运参数"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <com.mobileoffice.view.TouchText
+                android:id="@+id/tv_three"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/green"
+                android:gravity="center"
+                android:text="修复参数"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <com.mobileoffice.view.TouchText
+                android:id="@+id/tv_four"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/green"
+                android:gravity="center"
+                android:text="其他参数"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+
+        </com.mobileoffice.view.TouchLinearLayout>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@id/ll_content"
+            android:background="@color/green" />
+
+        <com.mobileoffice.view.TouchLinearLayout
+            android:id="@+id/ll_data"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:layout_below="@id/tv_content"
+            android:background="@color/white"
+            android:elevation="4dp"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <com.mobileoffice.view.TouchRelative
+                android:id="@+id/rl_temperature_content"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+
+                <com.mobileoffice.view.TouchRelative
+                    android:id="@+id/rl_temperature"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:visibility="visible">
+
+                    <com.mobileoffice.view.TouchText
+                        android:id="@+id/iv_temperature_warning"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="电量"
+                        android:textColor="@color/font_black"
+                        android:textSize="14sp" />
+
+                    <com.mobileoffice.view.TouchText
+                        android:id="@+id/tv_temperature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_temperature_warning"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        android:drawableLeft="@drawable/cloud_2detail_2power"
+                        android:gravity="center"
+                        android:text="60%"
+                        android:textColor="@color/blue" />
+                </com.mobileoffice.view.TouchRelative>
+
+                <ImageView
+                    android:id="@+id/iv_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cloud_2detail_2tag"
+                    android:visibility="gone" />
+
+            </com.mobileoffice.view.TouchRelative>
+
+            <TextView
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray" />
+
+            <com.mobileoffice.view.TouchRelative
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.mobileoffice.view.TouchRelative
+                    android:id="@+id/rl_humidity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/iv_humidity_warning"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="温度"
+                        android:textColor="@color/font_black"
+                        android:textSize="14sp"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_humidity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_humidity_warning"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        android:drawableLeft="@drawable/cloud_2detail_1temp"
+                        android:gravity="center"
+                        android:text="3℃"
+                        android:textColor="@color/blue" />
+                </com.mobileoffice.view.TouchRelative>
+
+                <ImageView
+                    android:id="@+id/iv_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cloud_2detail_2tag"
+                    android:visibility="gone" />
+
+            </com.mobileoffice.view.TouchRelative>
+
+            <TextView
+                android:id="@+id/tv_two_line"
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray" />
+
+            <com.mobileoffice.view.TouchRelative
+                android:id="@+id/rl_flow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.mobileoffice.view.TouchRelative
+                    android:id="@+id/rl_temperature1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/iv_flow_warning"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="距离"
+                        android:textColor="@color/font_black"
+                        android:textSize="14sp"
+
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_flow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_flow_warning"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        android:drawableLeft="@drawable/cloud_2detail_1juli"
+                        android:gravity="center"
+                        android:text="12km"
+                        android:textColor="@color/blue" />
+                </com.mobileoffice.view.TouchRelative>
+
+                <ImageView
+                    android:id="@+id/iv_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cloud_2detail_2tag"
+                    android:visibility="gone" />
+
+            </com.mobileoffice.view.TouchRelative>
+
+            <TextView
+                android:id="@+id/tv_three_line"
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray" />
+
+            <com.mobileoffice.view.TouchRelative
+                android:id="@+id/rl_stress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.mobileoffice.view.TouchRelative
+                    android:id="@+id/rl_temperature2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tv_stress_warning"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="碰撞"
+                        android:textColor="@color/font_black"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_stress"
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_stress_warning"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        android:drawableLeft="@drawable/cloud_2detail_2crash"
+                        android:gravity="center"
+                        android:text="2次"
+                        android:textColor="@color/blue" />
+                </com.mobileoffice.view.TouchRelative>
+
+                <ImageView
+                    android:id="@+id/iv_four"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:src="@drawable/cloud_2detail_2tag"
+                    android:visibility="gone" />
+
+            </com.mobileoffice.view.TouchRelative>
+        </com.mobileoffice.view.TouchLinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_data_over"
+            android:layout_width="match_parent"
+            android:layout_height="105dp"
+            android:layout_below="@id/tv_content"
+            android:background="@color/blue"
+            android:orientation="horizontal"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rl_temperature_big"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_content"
+            android:background="@drawable/cloud_2detail_2bg"
+            android:elevation="4dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_big_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cloud_2detail_2tag"
+                android:visibility="gone" />
+
+            <TextView
+
+                android:id="@+id/iv_temperature_warning_big"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="电量"
+                android:textColor="@color/highlight"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_temperature_big"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_temperature_warning_big"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:drawableLeft="@drawable/cloud_2detail_2power_on"
+                android:gravity="center"
+                android:text="80%"
+                android:textColor="@color/highlight" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_humidity_big"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_content"
+            android:background="@drawable/cloud_2detail_2bg"
+            android:elevation="4dp"
+
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_big_two"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:src="@drawable/cloud_2detail_2tag"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/iv_humidity_warning_big"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="温度"
+                android:textColor="@color/highlight"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_humidity_big"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_humidity_warning_big"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:drawableLeft="@drawable/cloud_2detail_1temp_on"
+                android:gravity="center"
+                android:text="3℃%"
+                android:textColor="@color/highlight" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_flow_big"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_content"
+            android:background="@drawable/cloud_2detail_2bg"
+            android:elevation="4dp"
+
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_big_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:src="@drawable/cloud_2detail_2tag"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/iv_flow_warning_big"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="距离"
+                android:textColor="@color/highlight"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_flow_big"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_flow_warning_big"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:drawableLeft="@drawable/cloud_2detail_1juli_on"
+                android:gravity="center"
+                android:text="12km"
+                android:textColor="@color/highlight" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_stress_big"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_content"
+            android:background="@drawable/cloud_2detail_2bg"
+            android:elevation="4dp"
+
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_big_four"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:src="@drawable/cloud_2detail_2tag"
+
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/iv_stress_warning_big"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="碰撞"
+                android:textColor="@color/highlight"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_stress_big"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_stress_warning_big"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:drawableLeft="@drawable/cloud_2detail_2crash_on"
+                android:gravity="center"
+                android:text="2次"
+                android:textColor="@color/highlight" />
+
+        </RelativeLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/ll_data"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:elevation="4dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_no_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/ll_data"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:elevation="4dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_data"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/cloud_nodata" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="暂无数据！"
+                android:textColor="@color/font_black_9"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/ll_data"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:elevation="4dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ProgressBar
+                android:id="@+id/pb_web"
+                style="@style/mProgress_circle"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="0dp"
+                android:elevation="4dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:elevation="4dp"
+            android:id="@+id/ll_conversation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="40dp"
+            android:layout_marginRight="@dimen/margin_space">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cloud_2detail_float" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

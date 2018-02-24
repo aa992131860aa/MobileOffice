@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/main"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_new_monitor"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/main">
+
+        <LinearLayout
+            android:id="@+id/ll_new_monitor_back"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/nav_back" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_new_monitor_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingBottom="@dimen/title_bottom"
+            android:paddingTop="@dimen/title_top"
+            android:text="新建转运"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_size" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/title_other_right"
+                android:layout_marginRight="@dimen/title_other_right"
+                android:src="@mipmap/ic_launcher"
+                android:text="删除"
+                android:textColor="@color/font_white"
+                android:textSize="16sp"
+
+                />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.mobileoffice.controller.new_monitor.NoScrollViewPager
+
+        android:id="@+id/vp_new_monitor"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white" />
+
+
+</LinearLayout>

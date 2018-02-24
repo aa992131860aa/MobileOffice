@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\git\\MobileOffice\\simplezxing\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
+            "map": [
+                {
+                    "source": "D:\\git\\MobileOffice\\simplezxing\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,16",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,114,162,215,267,303,346,392,426,520,710,837",
+                        "endLines": "2,3,4,5,6,7,8,9,10,11,15,18",
+                        "endColumns": "58,47,52,51,35,42,45,33,93,189,12,12",
+                        "endOffsets": "109,157,210,262,298,341,387,421,515,705,832,944"
+                    }
+                }
+            ]
+        }
+    ]
+}

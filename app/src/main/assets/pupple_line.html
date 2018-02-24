@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta  charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <script src="https://img.hcharts.cn/highcharts/highcharts.js"></script>
+</head>
+
+<body>
+
+<div id="temperature" style="overflow:hidden"></div>
+
+
+<script>
+
+
+                function set(data,pT,status){
+                    document.getElementById('temperature').style.height= window.innerHeight+'px';
+                  //  document.getElementById("temperature").style.overflow="hidden";
+                   //alert(document.getElementById('temperature').offsetHeight);
+
+                    var dataX = [];
+                    var dataY = [];
+                     var dataZ = [];
+                    var records = JSON.parse(data);
+
+                    var total = records.length;
+                    var totalSum = 0;
+
+
+                    var t = pT;
+
+                    for (var j = 0; j < records.length; j++) {
+                    var item = records[j];
+
+                      dataX.push(item.recordAt);
+                      dataY.push(item.pupple*1.0);
+                     totalSum++;
+
+                    }
+                   if(totalSum>0){
+                     t =parseInt( totalSum/pT);
+                    }
+
+                       if(status=='transfering'){
+
+
+                 for (var j = 0; j < records.length; j++) {
+                  if(j%5==0){
+                   dataY.push(null);
+                  }
+
+                 }
+
+
+                }
+
+                    var chart = new Highcharts.Chart('temperature', {
+                            chart: {
+                                type: 'line'                         //指定图表的类型，默认是折线图（line）
+                            },
+                            title: {
+                                text: ''                //指定图表标题
+                            },
+                            xAxis: {
+                                tickInterval: t,
+                                showLastLabel: false,
+                                categories: dataX //指定x轴分组
+                            },
+                            yAxis: {
+                                title: {
+                                    text: '气泡(个)'                //指定y轴的标题
+                                },
+                                //tickPositions: [-6, 0, 6, 12, 18] // 指定竖轴坐标点的值
+                            },
+                            credits: {
+                                enabled: false
+                            },
+                              legend: {
+                                enabled: false
+                              },
+                            series: [{                              //指定数据列
+                                name: '气泡',                       //数据列名
+                                data: dataY,                  //数据
+
+                            }]
+                        });
+
+
+                }
+
+
+
+
+
+</script>
+</body>
+
+</html>

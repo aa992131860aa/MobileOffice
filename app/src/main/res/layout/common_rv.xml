@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:paddingTop="20dp"
+        android:id="@+id/tv_exception"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="异常情况"
+        android:textColor="@color/font_black"
+        android:textSize="16sp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:visibility="visible"
+        android:id="@+id/rv_content"
+        android:layout_width="match_parent"
+
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_no_data"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+       android:layout_marginTop="-10dp"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/nav_good"/>
+        <TextView
+            android:text="Good！暂未发生异常~"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/font_black_9"
+            android:layout_marginTop="20dp"
+            />
+    </LinearLayout>
+</LinearLayout>

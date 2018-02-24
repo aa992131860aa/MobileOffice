@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sv_top"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    >
+
+    <RelativeLayout
+        android:background="#f0f0f0"
+        android:id="@id/rc_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl_message_system"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/layout_seletor"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/iv_system_photo"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="6dp"
+                android:src="@drawable/msg_1index_notice" />
+
+            <LinearLayout
+                android:id="@+id/ll_system_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/iv_system_photo"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_system_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:text="系统消息"
+                    android:textColor="#353535"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_system_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    tools:text="09:12" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_system_title"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/iv_system_photo"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_system_content"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="18dp"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:textColor="@color/font_black_9"
+                    android:textSize="14sp" />
+
+                <com.mobileoffice.view.DragPointView
+                    android:id="@+id/dpv_system_num"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_marginBottom="1dp"
+                    android:textColor="@color/white"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/rc_status_bar"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_below="@id/rl_message_system"
+            android:background="@color/bg"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/rc_status_bar_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:indeterminateDrawable="@drawable/rc_notification_network_available"
+                android:paddingLeft="27dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/rc_status_bar_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="25dp"
+                android:text="@string/rc_notice_network_unavailable"
+                android:textColor="#776868"
+                android:textSize="14sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/rc_conversation_list_empty_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_message_system"
+            android:layout_marginTop="127dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/rc_conversation_list_empty"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/rc_empty_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rc_conversation_list_empty_prompt"
+                android:textColor="#999999"
+                android:textSize="14sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_system_line"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_below="@id/rl_message_system"
+            android:background="#f0f0f0" />
+
+        <ListView
+
+            android:id="@id/rc_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/tv_system_line"
+            android:background="@color/rc_text_color_primary_inverse"
+            android:divider="@color/rc_conversation_list_divider_color"
+            android:dividerHeight="0.5dp" />
+
+
+    </RelativeLayout>
+</LinearLayout>

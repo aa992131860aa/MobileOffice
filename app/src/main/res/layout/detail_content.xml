@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_contain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/layout_seletor"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <LinearLayout
+
+        android:id="@+id/rl_time"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_gravity="center_horizontal"
+        android:paddingRight="10dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingTop="14dp"
+
+        >
+        <TextView
+           android:visibility="gone"
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="06-24"
+            android:textColor="@color/orange_text"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20:55"
+            android:textColor="@color/font_black_9"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rlTimeline"
+        android:layout_width="14dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_top_line"
+            android:layout_width="1px"
+            android:layout_height="15dp"
+            android:layout_centerHorizontal="true"
+
+            android:background="@color/gray" />
+
+        <TextView
+            android:id="@+id/tv_dot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_top_line"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/cloud_4location_now" />
+
+        <TextView
+            android:id="@+id/tv_bottom"
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tv_dot"
+            android:layout_centerHorizontal="true"
+            android:background="@color/gray" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/rlCenter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="6dp"
+        android:paddingRight="10dp">
+
+
+        <TextView
+
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="准备送往下一站 深圳集散中心脏 [深圳市]"
+            android:textColor="@color/font_black_9"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>

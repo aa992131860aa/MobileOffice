@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "D:\\git\\MobileOffice\\simplezxing\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4_nav_back.png.flat",
+        "source": "D:\\git\\MobileOffice\\simplezxing\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\nav_back.png"
+    },
+    {
+        "merged": "D:\\git\\MobileOffice\\simplezxing\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxxhdpi-v4_nav_back.png.flat",
+        "source": "D:\\git\\MobileOffice\\simplezxing\\build\\intermediates\\bundles\\debug\\res\\drawable-xxxhdpi-v4\\nav_back.png"
+    },
+    {
+        "merged": "D:\\git\\MobileOffice\\simplezxing\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4_nav_back.png.flat",
+        "source": "D:\\git\\MobileOffice\\simplezxing\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\nav_back.png"
+    },
+    {
+        "merged": "D:\\git\\MobileOffice\\simplezxing\\build\\intermediates\\res\\merged\\androidTest\\debug\\raw_beep.ogg.flat",
+        "source": "D:\\git\\MobileOffice\\simplezxing\\build\\intermediates\\bundles\\debug\\res\\raw\\beep.ogg"
+    },
+    {
+        "merged": "D:\\git\\MobileOffice\\simplezxing\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout_capture.xml.flat",
+        "source": "D:\\git\\MobileOffice\\simplezxing\\build\\intermediates\\bundles\\debug\\res\\layout\\capture.xml"
+    },
+    {
+        "merged": "D:\\git\\MobileOffice\\simplezxing\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4_nav_back.png.flat",
+        "source": "D:\\git\\MobileOffice\\simplezxing\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\nav_back.png"
+    }
+]

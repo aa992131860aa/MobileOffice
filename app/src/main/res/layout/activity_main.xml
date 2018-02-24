@@ -1,0 +1,286 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_system_line1"
+        android:layout_width="match_parent"
+        android:layout_height="1px" />
+
+    <TextView
+        android:id="@+id/tv_system_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_light"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="#dfdfdd" />
+
+        <!-- 底部导航 -->
+
+        <LinearLayout
+            android:id="@+id/main_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rl_cloud"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="3dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center">
+
+                    <!--android:src="@drawable/tab_contact_list"-->
+
+
+                    <ImageView
+                        android:id="@+id/iv_cloud"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:focusable="false"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/nav_1cloud_on" />
+
+                    <TextView
+                        android:id="@+id/tv_cloud"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_cloud"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/cloud_monitor"
+                        android:textColor="@color/main"
+                        android:textSize="11sp" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_message"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="3dp"
+                >
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true">
+
+                    <RelativeLayout
+                        android:id="@+id/ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/iv_message"
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="#ffffff"
+                            android:focusable="false"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/nav_2msg" />
+
+                        <TextView
+                            android:id="@+id/tv_message"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/iv_message"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/message"
+                            android:textColor="@color/font_black_3"
+                            android:textSize="11sp" />
+
+
+                    </RelativeLayout>
+
+                    <com.mobileoffice.view.DragPointView
+                        android:id="@+id/dpv_message_num"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="14dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_toRightOf="@id/ll"
+                        android:textColor="@android:color/white"
+                        android:textSize="12sp"
+                        android:visibility="invisible" />
+
+
+                </FrameLayout>
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_new"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="3dp">
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_link"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="3dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/iv_link"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_centerHorizontal="true"
+                        android:focusable="false"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/nav_4link" />
+                    <!--android:src="@drawable/tab_find"-->
+
+                    <TextView
+                        android:id="@+id/tv_link"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_link"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/link"
+                        android:textColor="@color/font_black_3"
+                        android:textSize="11sp" />
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_me"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="3dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/iv_me"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_centerHorizontal="true"
+                        android:focusable="false"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/nav_5mine" />
+                    <!--android:src="@drawable/tab_contact_list"-->
+
+                    <TextView
+                        android:id="@+id/tv_me"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_me"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/me"
+                        android:textColor="@color/font_black_3"
+                        android:textSize="11sp" />
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:visibility="gone"
+        android:id="@+id/content_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_bottom"
+        android:layout_below="@id/tv_system_line"
+        android:layout_weight="1"
+        android:background="@color/bg" />
+      <com.mobileoffice.controller.new_monitor.NoScrollViewPager
+          android:visibility="visible"
+          android:id="@+id/vp_content"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_above="@id/ll_bottom"
+          android:layout_below="@id/tv_system_line"
+          android:background="@color/bg"
+          />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_main_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="4dp"
+        android:gravity="center">
+
+        <!--android:src="@drawable/tab_find"-->
+        <ImageView
+            android:id="@+id/iv_new"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:focusable="false"
+            android:scaleType="centerInside"
+            android:src="@drawable/nav_3newtrs" />
+
+        <TextView
+            android:id="@+id/tv_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_new"
+            android:layout_centerHorizontal="true"
+            android:text="@string/new_build"
+            android:textColor="@color/font_black_3"
+            android:textSize="11sp" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

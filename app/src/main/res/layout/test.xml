@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <RelativeLayout
+            android:id="@+id/rl_temperature3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rc_ad_list_audio_icon">
+
+            <ImageView
+                android:id="@+id/iv_temperature_warning3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_temperature3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_temperature_warning3"
+                android:layout_centerHorizontal="true"
+                android:drawableLeft="@mipmap/ic_launcher"
+                android:gravity="center"
+                android:text="温度" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_temperature4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rc_ad_list_audio_icon">
+
+            <ImageView
+                android:id="@+id/iv_temperature_warning4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_temperature4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_temperature_warning4"
+                android:layout_centerHorizontal="true"
+                android:drawableLeft="@mipmap/ic_launcher"
+                android:gravity="center"
+                android:text="温度" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_temperature5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rc_ad_list_audio_icon">
+
+            <ImageView
+                android:id="@+id/iv_temperature_warning5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_temperature5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_temperature_warning5"
+                android:layout_centerHorizontal="true"
+                android:drawableLeft="@mipmap/ic_launcher"
+                android:gravity="center"
+                android:text="温度" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_temperature6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/rc_ad_list_audio_icon">
+
+            <ImageView
+                android:id="@+id/iv_temperature_warning6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_temperature6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_temperature_warning6"
+                android:layout_centerHorizontal="true"
+                android:drawableLeft="@mipmap/ic_launcher"
+                android:gravity="center"
+                android:text="温度" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/test1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_content"
+        android:src="@drawable/rc_cs_admin" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_content"
+        android:layout_toRightOf="@id/test1"
+        android:src="@drawable/rc_cs_admin" />
+</RelativeLayout>

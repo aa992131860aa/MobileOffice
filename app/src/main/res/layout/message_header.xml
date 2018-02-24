@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_message_system"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:background="@drawable/layout_seletor"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:visibility="visible">
+
+    <ImageView
+        android:id="@+id/iv_system_photo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="6dp"
+        android:src="@drawable/msg_1index_notice" />
+
+    <LinearLayout
+        android:id="@+id/ll_system_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/iv_system_photo"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_system_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="系统消息"
+            android:textColor="#353535"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_system_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            tools:text="09:12" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_system_title"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/iv_system_photo"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_system_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="18dp"
+            android:layout_weight="1"
+            android:text="content"
+            android:textColor="@color/font_black_9"
+            android:textSize="14sp" />
+
+        <com.mobileoffice.view.DragPointView
+            android:id="@+id/dpv_system_num"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_marginBottom="1dp"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+
+</RelativeLayout>

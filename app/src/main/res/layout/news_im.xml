@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<LinearLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_service1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="start service1" />
+
+    <Button
+        android:id="@+id/btn_service2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="start service2" />
+    <Button
+        android:id="@+id/btn_service3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="start service3" />
+
+    <Button
+        android:id="@+id/btn_session"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="start session" />
+
+    <Button
+        android:id="@+id/btn_conversation_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="conversation list" />
+    <Button
+        android:id="@+id/btn_create_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="create group"
+        />
+    <Button
+        android:id="@+id/btn_add_group_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="add group user"
+        />
+
+    <Button
+        android:id="@+id/btn_del_group_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="del group user"
+        />
+    <Button
+        android:id="@+id/btn_check_online"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="check Online"/>
+    <Button
+        android:id="@+id/btn_discussion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="discussion"
+        />
+</LinearLayout>
+</ScrollView>

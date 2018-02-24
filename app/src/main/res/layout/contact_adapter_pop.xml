@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="280dp"
+              android:layout_height="wrap_content"
+              android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    >
+
+    <TextView
+        android:id="@+id/id_popup_tv"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:background="@color/bg"
+        android:gravity="left|center_vertical"
+        tools:text="gg"
+        android:paddingLeft="16dp"
+        android:textColor="#000"
+        android:textSize="16sp"/>
+    <TextView
+        android:layout_width="280dp"
+        android:layout_height="1px"
+        android:background="@color/gray"
+
+        />
+
+</LinearLayout>

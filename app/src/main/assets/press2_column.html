@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta  charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <script src="https://img.hcharts.cn/highcharts/highcharts.js"></script>
+</head>
+
+<body>
+
+<div id="temperature" ></div>
+
+
+<script>
+
+
+                function set(data,pT,pSize){
+
+                    //alert(pT+','+pSize);
+                    document.getElementById('temperature').style.height= window.innerHeight+'px';
+
+
+                    var dataX = [];
+                    var dataY = [];
+                    var records = JSON.parse(data);
+                    var size = pSize;
+                    var total = records.length;
+                    var totalSum = 0;
+
+
+                    var t = pT;
+
+
+
+                    var num =   parseInt( records.length/pSize)
+                      if(records.length<10){
+                       for (var j = 0; j < records.length; j++) {
+
+                    var item = records[j];
+
+                      dataX.push(item.recordAt);
+                      dataY.push(item.distance*1.0);
+                     totalSum++;
+                         }
+
+                    }else{
+                    for (var j = 0; j < records.length; j++) {
+                    if(j%num==0){
+                    var item = records[j];
+
+                      dataX.push(item.recordAt);
+                      dataY.push(item.press2*1.0);
+                     totalSum++;
+}
+                    }
+                    }
+                     t =parseInt( totalSum/pT);
+
+                    var chart = new Highcharts.Chart('temperature', {
+                            chart: {
+                                type: 'column'                         //指定图表的类型，默认是折线图（line）
+                            },
+                            title: {
+                                text: ''                //指定图表标题
+                            },
+                            xAxis: {
+                                tickInterval: t,
+                                categories: dataX //指定x轴分组
+                            },
+                            yAxis: {
+                                title: {
+                                    text: '压力(mmHg)'                //指定y轴的标题
+                                },
+                                //tickPositions: [-6, 0, 6, 12, 18] // 指定竖轴坐标点的值
+                            },
+                              legend: {
+                                enabled: false
+                              },
+                            credits: {
+                                enabled: false
+                            },
+                             plotOptions: {
+                             series:{
+                                 dataLabels:{
+                            enabled:true, // dataLabels设为true
+                            }
+                             }
+                                  },
+                            series: [{                              //指定数据列
+                                name: '压力2',                       //数据列名
+                                data: dataY,                  //数据
+
+                            }]
+                        });
+
+
+                }
+
+
+
+
+
+</script>
+</body>
+
+</html>

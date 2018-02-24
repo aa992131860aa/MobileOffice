@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta  charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <script src="https://cdn.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>
+
+
+    <script src="https://cdn.hcharts.cn/highcharts/highcharts.js"></script>
+</head>
+
+<body>
+
+<div id="temperature" style="overflow:hidden"></div>
+
+
+<script>
+
+
+
+
+                   function set(dataXX,dataYY){
+
+
+
+   document.getElementById('temperature').style.height= window.innerHeight+'px';
+
+        var recordXX =  JSON.parse(dataXX);
+         var recordYY =  JSON.parse(dataYY);
+
+       var dataY = [];
+       var dataX = [];
+
+        for(var i=0;i<recordXX.length;i++){
+           var item = recordXX[i];
+           dataX.push(item.date);
+
+
+        }
+          for(var i=0;i<recordYY.length;i++){
+           var item = recordYY[i];
+
+           dataY.push(item);
+
+        }
+
+
+
+  $('#temperature').highcharts({
+        chart: {
+            type: 'spline'
+        },
+        title: {
+            text: ' '
+        },
+        xAxis: {
+         tickInterval: 4,
+            categories: dataX
+        },
+        credits: {
+                                enabled: false
+                            },
+                              legend: {
+                                enabled: false
+                              },
+        yAxis: {
+            title: {
+                text: '温度（℃）'
+            },
+            labels: {
+                formatter: function () {
+                    return this.value + '°';
+                }
+            }
+        },
+        tooltip: {
+            crosshairs: true,
+            shared: true
+        },
+        plotOptions: {
+            spline: {
+                marker: {
+                    radius: 4,
+                    lineColor: '#666666',
+                    lineWidth: 1
+                }
+            }
+        },
+        series: [{
+            name: '天气',
+            marker: {
+                symbol: 'square'
+            },
+            data: dataY
+        }]
+    });
+}
+
+
+
+
+</script>
+</body>
+
+</html>

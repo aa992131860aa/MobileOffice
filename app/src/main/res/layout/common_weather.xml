@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:text="天气情况"
+        android:textColor="@color/font_black"
+        android:textSize="16sp" />
+    <ProgressBar
+        android:elevation="4dp"
+        android:id="@+id/pb_web"
+        style="@style/mProgress_circle"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="0dp"
+        android:layout_centerInParent="true"
+        />
+    <com.tencent.smtt.sdk.WebView
+        android:layout_below="@id/tv_title"
+        android:id="@+id/wv_weather"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+
+        />
+
+</RelativeLayout>

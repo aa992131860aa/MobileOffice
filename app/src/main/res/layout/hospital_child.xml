@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/bg"
+    >
+    <TextView
+        android:id="@+id/tv_hospital_child"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textColor="@color/font_black_3"
+        android:background="@color/white"
+        android:text="浙江"
+        android:textSize="14sp"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        />
+
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:background="@color/gray"
+            android:layout_width="match_parent"
+            android:layout_height="1px" />
+</LinearLayout>

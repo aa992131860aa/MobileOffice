@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/white"
+
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/ll_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:background="@drawable/edit_border_white"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cloud_1index_id" />
+
+            <TextView
+                android:id="@+id/tv_transfer_info_organSeg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="1202"
+                android:textColor="@color/font_black"
+                android:textSize="16sp" />
+            <ImageView
+                android:id="@+id/iv_auto"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cloud_1index_auto"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="1px"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_transfer_info_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2017-07-01"
+                android:textColor="@color/green"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <TextView
+                android:id="@+id/tv_transfer_info_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="杭州"
+                android:textColor="@color/main"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/cloud_2lishi_arrow" />
+
+            <TextView
+                android:id="@+id/tv_transfer_info_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="上海"
+                android:textColor="@color/main"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_transfer_info_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="共123km"
+                android:textColor="@color/highlight"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="1px"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_transfer_info_organ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="心脏"
+                android:textColor="@color/font_black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="1px"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_transfer_info_blood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="B型"
+                android:textColor="@color/font_black"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cloud_2lishi_yun" />
+
+            <TextView
+                android:id="@+id/tv_transfer_info_true_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="王先生"
+                android:textColor="@color/font_black_9"
+                android:textSize="14sp"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_transfer_info_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18398880000"
+                android:textColor="@color/font_black_9"
+                android:textSize="14sp"
+
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="1px"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_transfer_info_contact_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="18398880000"
+                android:textColor="@color/font_black_9"
+                android:textSize="14sp"
+
+                />
+
+            <TextView
+                android:id="@+id/tv_transfer_info_contact_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="王先生"
+                android:textColor="@color/font_black_9"
+                android:textSize="14sp"
+
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cloud_2lishi_xie" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+         android:id="@+id/iv_history_item"
+        android:visibility="visible"
+        android:elevation="4dp"
+        android:src="@drawable/cloud_index_imperfect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <LinearLayout
+        android:id="@+id/ll_transfer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_seletor_coner"
+        android:orientation="vertical"
+
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_info"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:scaleType="center"
+                android:src="@drawable/cloud_1index_id" />
+
+            <TextView
+                android:id="@+id/tv_transfer_item_organ_seg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="123456"
+                android:textColor="@color/font_black"
+                android:textSize="16sp" />
+            <ImageView
+                android:id="@+id/iv_auto"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginLeft="10dp"
+                android:scaleType="center"
+                android:src="@drawable/cloud_1index_auto" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <com.mobileoffice.view.AnimTextView
+                android:id="@+id/tv_transfer_item_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="状态"
+                android:textColor="@color/green"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/iv_transfer_item_organ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:src="@drawable/cloud_1index_1liver" />
+
+            <TextView
+                android:id="@+id/tv_transfer_item_organ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:text="肝脏"
+                android:textColor="@color/font_black_3"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="2" />
+
+            <ImageView
+                android:id="@+id/iv_blood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:src="@drawable/cloud_1index_blood" />
+
+            <TextView
+                android:id="@+id/tv_transfer_item_blood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:text="AB型"
+                android:textColor="@color/font_black_3" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+
+            >
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:id="@+id/ll_transfer_person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:gravity="center"
+                    android:textColor="@color/highlight"
+                    android:id="@+id/iv_left_phone"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="center"
+                    android:background="@drawable/team_border"
+                    android:text="运"
+                     />
+
+                <TextView
+                    android:id="@+id/tv_transfer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="转运医师"
+                    android:textColor="@color/font_black_9"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tv_transfer_item_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="18300000000"
+                    android:textColor="@color/font_black_9"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/ll_help_person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/iv_right_phone"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="center"
+                    android:gravity="center"
+                    android:textColor="@color/highlight"
+                    android:text="协"
+                    android:background="@drawable/team_border" />
+                <TextView
+                    android:id="@+id/tv_xieyun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="协调医师"
+                    android:textColor="@color/font_black_9"
+                    android:textSize="12sp" />
+                <TextView
+                    android:id="@+id/tv_transfer_item_contact_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="18300000000"
+                    android:textColor="@color/font_black_9"
+                    android:visibility="gone"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+            <com.mobileoffice.view.DotView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                android:visibility="visible"
+                />
+
+            <LinearLayout
+                android:id="@+id/ll_speed_dial"
+                android:layout_width="90dp"
+                android:layout_height="28dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:background="@drawable/edit_border_green_white"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_speed_dial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cloud_1index_phone"
+                    />
+                <TextView
+                    android:id="@+id/tv_speed_dial"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:text="快速拨号"
+                    android:textColor="@color/font_black_6"
+
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/gray" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_bg"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:background="@drawable/cloud_1index_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="8dp"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cloud_1index_time" />
+
+                <TextView
+                    android:id="@+id/tv_transfer_item_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:text="00:00"
+                    android:textColor="@color/blue"
+                    android:textSize="14sp"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_transfer_item_start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:text="杭州"
+                    android:textColor="@color/font_black_3"
+                    android:textSize="16sp" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+                <TextView
+                    android:id="@+id/tv_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="剩余0km"
+                    android:textColor="@color/font_black_6"
+                    android:textSize="14sp" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/tv_transfer_item_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="上海"
+                    android:textColor="@color/font_black_3"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="11dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="18dp"
+                    android:background="@color/red"
+                    android:visibility="gone" />
+
+                <com.mobileoffice.utils.SeekBarHeart
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/sbh_transfer_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="19dp"
+                    app:count="30"
+
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp">
+                    <pl.droidsonroids.gif.GifImageView
+                        android:id="@+id/iv_heart"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="@android:color/transparent"
+                        />
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_dot"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/dot_yellow" />
+
+            <TextView
+                android:id="@+id/tv_transfer_item_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 2017-04-07 已在上海浦东机场登机飞往杭州"
+                android:textColor="@color/yellow"
+                android:textSize="14sp"
+
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_transfer_item_no_start"
+        android:layout_width="match_parent"
+        android:layout_height="401dp"
+        android:background="@drawable/edit_border_black6"
+        android:elevation="4dp">
+
+        <ImageView
+            android:id="@+id/iv_transfer_item_start"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/cloud_6start_start" />
+
+        <ImageView
+            android:id="@+id/iv_transfer_item_del"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/cloud_6start_delete" />
+
+        <ImageView
+            android:id="@+id/iv_transfer_item_edit"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/cloud_6start_edit" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_cover"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_marginTop="160dp"
+        android:background="#10000000"
+        android:orientation="horizontal"
+        android:visibility="gone" />
+
+   <ImageView
+
+       android:id="@+id/iv_example"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:src="@drawable/cloud_index_example"
+       />
+</RelativeLayout>
